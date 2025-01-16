@@ -9,6 +9,7 @@ import { rgba } from 'polished';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { withSuspense } from '@/components/withSuspense';
 import { useActiveTabKey } from '@/hooks/useActiveTabKey';
 import { SidebarTabKey } from '@/store/global/initialState';
 import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
@@ -81,4 +82,4 @@ NavBar.displayName = 'NavBar';
 NavBar.displayName = 'MobileNav';
 >>>>>>>> f203f9016 (refactor nav into core layout):src/app/[variants]/(main)/_layout/Mobile/NavBar.tsx
 
-export default NavBar;
+export default withSuspense(NavBar);
